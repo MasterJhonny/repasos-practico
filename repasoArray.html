@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>repaso array</title>
+</head>
+<body>
+    <script>
+        let persona = {
+            name: 'Jhonny',
+            edad: 27,
+            carrera: 'ADM'
+        }
+        let valores = [7, 2, 1, 5, 9, 12, 15]
+        function firstElement(cadena){
+            return cadena[0]
+        }
+        function printElement(cadena){
+            cadena.forEach(e => console.log(e))
+        }
+        function printObject(obj){
+            for(let propiedad in obj){
+                console.log(propiedad, obj[propiedad])
+            }
+        }
+    </script>
+</body>
+</html>

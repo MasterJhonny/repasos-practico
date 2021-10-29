@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>reto cupones</title>
+</head>
+<style>
+    html {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+</style>
+<body>
+    <main>
+        <label>
+            <span>Sectiona el tipo de Cupon:</span>
+            <select name="cupones" id="cupones">
+                <option value="1">JuanDC es Batman</option>
+                <option value="2">Pero no le digas a nadie</option>
+                <option value="3">Es un secreto</option>
+            </select>
+            <button onclick="aplicarCupon()">calcular</button>
+            <p id="salida"></p>
+        </label>
+    </main>
+    <script>
+        // const de la salida del valores
+        const salida = document.getElementById("salida")
+        // function event
+        const aplicarCupon = () => {
+            const cupon = document.getElementById("cupones")
+            let cuponElegido = 0
+            switch (parseInt(cupon.value)) {
+                case 1:
+                    cuponElegido = 15
+                break;
+                case 2:
+                    cuponElegido = 30
+                break;
+                case 3:
+                    cuponElegido = 25
+                break;
+                default:
+            }
+            salida.innerText = `El precio con descuentod  es del ${precioConDesc(cuponElegido, precio)}$`// falta la funcion de calcular precio con descuentod es del ${precioConDesc()}
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // variables.
+        /*
+        Nombre --> name --> string
+        Apellido --> lastName --> string
+        Nombre de usuario --> userName --> string
+        Edad --> age --> number
+        Correo electronico --> email --> string
+        Mayor de edad --> adult --> boolean
+        Dinero ahorrado --> savedMoney --> number
+        Deudas --> debt --> number
+        */
+        let name = 'Carlos '
+        let lastName = 'Quinteros'
+        let userName = 'carlitos'
+        let age = 30
+        let email = 'calitoQ@.example.com'
+        let adult = true
+        let savedMoney = 90000
+        let debt = 100
+
+        let completeName = name + lastName
+        let balance = savedMoney - debt
+
+        const fullName = (n, l) => {
+            console.log(`The full name is ${n} ${l}`)
+        }
+        fullName(name, lastName)
+
+        // const balance = (m, d) => {
+        //     console.log(`The balance in the account is ${m-d}$`)
+        // }
+        // balance(savedMoney, debt)
+        // funciones.
+        /*
+        que es una function?
+        -una duncion es bloque de codigo que realisa un tarea en espesifica y puede retorna algo
+        ¿Cuándo me sirve usar una función en mi código?
+        -cuando queremos realizar una tarea en eespecifica un y otra vez podemos esa secuencia de codigo en una function 
+        diferencia entre parametro y argumento?
+        -la diferencia entre parametro y argumento es que un parametro es la variable se que se declara en un function mientras que un argumento es aquel valor o dato que se le envia a un function.
+        
+        */
+        const saludar = (completeName, nickname) => {
+            console.log(`Mi nombre es ${completeName}, pero prefiero que me digas ${nickname}.`)
+        }
+        // condicionales
+        /*
+        ¿Qué es una condicional?
+        -una condicional es un estructura de control donde hay una condicionl que se valida y depenciendo de esta se procede un codigo diferente
+        -es un instruccion o grupo de instrucciones que se pueden ejecutar o no en funccion de la condicion.
+        ¿Qué tipos de condicionales existen en JavaScript y cuáles son sus diferencias?
+        -El if, if else, if, else if y el switch ternario
+        ¿Puedo combinar funciones y condicionales?
+        - si 
+        */
+        const tipoDeSuscripcion = "basic";
+
+        if(tipoDeSuscripcion === "Free") {
+            console.log("Solo puedes tomar los cursos gratis");
+        } else if (tipoDeSuscripcion === "basic"){
+            console.log("Puedes tomar casi todos los cursos de Platzi durante un mes");
+        } else if (tipoDeSuscripcion === "Expert") {
+            console.log("Puedes tomar casi todos los cursos de Platzi durante un año");
+        } else if (tipoDeSuscripcion === "Free"){
+            console.log("Tú y alguien más pueden tomar TODOS los cursos de Platzi durante un año");
+        }
+        if(tipoDeSuscripcion === "Free") {
+            console.log("Solo puedes tomar los cursos gratis");
+        }
+        if (tipoDeSuscripcion === "basic"){
+            console.log("Puedes tomar casi todos los cursos de Platzi durante un mes");
+        }
+        if (tipoDeSuscripcion === "Expert") {
+            console.log("Puedes tomar casi todos los cursos de Platzi durante un año");
+        }
+        if (tipoDeSuscripcion === "Expert+"){
+            console.log("Tú y alguien más pueden tomar TODOS los cursos de Platzi durante un año");
+        }
+
+        let tipos = new Array()
+        function Tipo (valor, message){
+            this.valor = valor
+            this.message = message
+        }
+        tipos.push(new Tipo("Free", "Solo puedes tomar los cursos gratis"))
+        tipos.push(new Tipo("basic", "Puedes tomar casi todos los cursos de Platzi durante un mes"))
+        tipos.push(new Tipo("Expert", "Puedes tomar casi todos los cursos de Platzi durante un año"))
+        tipos.push(new Tipo("Expert+", "Tú y alguien más pueden tomar TODOS los cursos de Platzi durante un año"))
+
+        tipos.forEach( e => {
+            if(tipoDeSuscripcion === e.valor) {
+                console.log(e.message)
+            } 
+        })
+        // ciclos...
+        /*
+        que es un siclo?
+        -es una secuencia de instrucciones de codigo que se ejecuta repetidas veces hasta que la condicion asignada deja de cumplirse.
+        ¿Qué tipos de ciclos existen en JavaScript?
+        -el for, while y el do while
+        ¿Puedo mezclar ciclos y condicionales?
+        - si
+        */
+        // replicar de for a codigo en while de los siguientes for
+        //1
+        for (let i = 0; i < 5; i++) {
+            console.log("El valor de i es: " + i);
+        }
+        let valor = 0
+        while(valor < 5) {
+            console.log("El valor de i es: " + valor);
+            valor++;
+        }
+        //2 
+        for (let i = 10; i >= 2; i--) {
+            console.warn("El valor de i es: " + i);
+        }
+        let num = 10
+        while(num >= 2){
+            console.log(`El valor de i es: ${num}`)
+            num--
+        }
+        // reto de suma con while
+        let res = 0
+        do{
+            res = prompt('Hola mundo, cuanto es: 2 + 2 = ?')
+        }while(res != 4 && res != 'cuatro')// Number.isInteger(res) && 
+        console.log('Felicidades has acertado... :)')
+
+        // Listas...
+        /*
+        que es un array?
+        -es una estructura de datos que permite almacenar un conjunto de datos Homogeneos, y que se pueden axceder por medio de un indice que cominesa en cero
+        se llaman tambien vectores y en javascrit se puede usar como una lista
+        que es un objeto?
+        -se representacion de un objeto de la vida real que contiene atributos y metodos, tambien se puede decir que un objeto es una colecction de atrinbutos y algunos de ellos pueden ser metodos 
+        cuando es mejor usar objetos o array?
+        -objetos cunado que remos representar objetos de la vida real, y array cuando estamos trabajando con listas
+        puedo nesclas objetos o incluso objetos con arrays?
+        -si
+        */
+    </script>
+</body>
+</html>
